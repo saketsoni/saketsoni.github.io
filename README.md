@@ -71,3 +71,15 @@ Feeling uninspired by the portfolio? Here's a list of cool portfolios I found af
 * <a href="http://nicoledominguez.com/portfolio/">http://nicoledominguez.com/portfolio/</a>
 * <a href="http://www.roxannecook.com/">http://www.roxannecook.com/</a>
 * <a href="http://www.84colors.com/portfolio.html">http://www.84colors.com/portfolio.html</a>
+
+Saket Soni - Updates made for Project 4:
+PageSpeed optimisations <a href="http://saketsoni.github.io/">http://saketsoni.github.io/</a>
+1. inline CSS into the HTML
+2. Add media="print" to the print.css
+3. Add Google Font Loader to reduce time
+4. Move Javascript calls to bottom of page and make the async
+
+Pizza optimisations <a href="http://saketsoni.github.io/views/pizza.html">http://saketsoni.github.io/views/pizza.html</a>
+1. on main.js reduce the number of pizzas displayed by updating FOR loop on function updatePositions(). Achieving 60FPS now
+2. Place var calls outside of for loop in changePizzaSizes()
+3. Create new var for checking .randomPizzaContainer length.

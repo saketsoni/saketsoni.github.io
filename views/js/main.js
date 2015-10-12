@@ -454,9 +454,10 @@ var resizePizzas = function(size) {
       //ASSUME ALL PIZZA ARE THE SAME SIZE. SO ONLY NEED TO FIND WIDTH OF FIRST PIZZA AND APPLY TO REST
       var dx = determineDx(document.querySelectorAll(".randomPizzaContainer")[0], size);
       var newwidth = (document.querySelectorAll(".randomPizzaContainer")[0].offsetWidth + dx) + 'px';
-      /*console.log("resize " + i +  " : dx value is : " + dx + ", and newwidth value is : " + newwidth); */
+      //CREATE NEW iloop VAR THAT WILL PREVENT LOOP FROM CHECKING LENGTH AT EVERY LOOP
+      var iloop = document.querySelectorAll(".randomPizzaContainer").length;
 
-    for (var i = 0; i < document.querySelectorAll(".randomPizzaContainer").length; i++) {
+    for (var i = 0; i < iloop; i++) {
       document.querySelectorAll(".randomPizzaContainer")[i].style.width = newwidth;
     }
   }
