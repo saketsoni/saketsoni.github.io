@@ -450,9 +450,13 @@ var resizePizzas = function(size) {
 
   // Iterates through pizza elements on the page and changes their widths
   function changePizzaSizes(size) {
+
+      //ASSUME ALL PIZZA ARE THE SAME SIZE. SO ONLY NEED TO FIND WIDTH OF FIRST PIZZA AND APPLY TO REST
+      var dx = determineDx(document.querySelectorAll(".randomPizzaContainer")[0], size);
+      var newwidth = (document.querySelectorAll(".randomPizzaContainer")[0].offsetWidth + dx) + 'px';
+      /*console.log("resize " + i +  " : dx value is : " + dx + ", and newwidth value is : " + newwidth); */
+
     for (var i = 0; i < document.querySelectorAll(".randomPizzaContainer").length; i++) {
-      var dx = determineDx(document.querySelectorAll(".randomPizzaContainer")[i], size);
-      var newwidth = (document.querySelectorAll(".randomPizzaContainer")[i].offsetWidth + dx) + 'px';
       document.querySelectorAll(".randomPizzaContainer")[i].style.width = newwidth;
     }
   }
